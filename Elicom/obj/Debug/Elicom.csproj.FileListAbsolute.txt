@@ -1,0 +1,56 @@
+C:\Temp\Elicom\Elicom\obj\Debug\ResolveAssemblyReference.cache
+C:\Temp\Elicom\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.resources
+C:\Temp\Elicom\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.uk.resources
+C:\Temp\Elicom\Elicom\obj\Debug\GenerateResource.read.1.tlog
+C:\Temp\Elicom\Elicom\obj\Debug\GenerateResource.write.1.tlog
+C:\Temp\Elicom\Elicom\bin\Debug\Elicom.dll
+C:\Temp\Elicom\Elicom\bin\Debug\Elicom.pdb
+C:\Temp\Elicom\Elicom\bin\Debug\uk\Elicom.resources.dll
+C:\Temp\Elicom\Elicom\bin\Debug\DriverGlobals.dll
+C:\Temp\Elicom\Elicom\bin\Debug\Globals.dll
+C:\Temp\Elicom\Elicom\bin\Debug\IODrivers.dll
+C:\Temp\Elicom\Elicom\obj\Debug\uk\Elicom.resources.dll
+C:\Temp\Elicom\Elicom\obj\Debug\Elicom.dll
+C:\Temp\Elicom\Elicom\obj\Debug\Elicom.pdb
+C:\Users\Domnin Dmitry\Desktop\Elicom\bin\Debug\Elicom.dll
+C:\Users\Domnin Dmitry\Desktop\Elicom\bin\Debug\Elicom.pdb
+C:\Users\Domnin Dmitry\Desktop\Elicom\bin\Debug\uk\Elicom.resources.dll
+C:\Users\Domnin Dmitry\Desktop\Elicom\bin\Debug\DriverGlobals.dll
+C:\Users\Domnin Dmitry\Desktop\Elicom\bin\Debug\Globals.dll
+C:\Users\Domnin Dmitry\Desktop\Elicom\bin\Debug\IODrivers.dll
+C:\Users\Domnin Dmitry\Desktop\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.resources
+C:\Users\Domnin Dmitry\Desktop\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.uk.resources
+C:\Users\Domnin Dmitry\Desktop\Elicom\obj\Debug\Elicom.csproj.GenerateResource.Cache
+C:\Users\Domnin Dmitry\Desktop\Elicom\obj\Debug\uk\Elicom.resources.dll
+C:\Users\Domnin Dmitry\Desktop\Elicom\obj\Debug\Elicom.dll
+C:\Users\Domnin Dmitry\Desktop\Elicom\obj\Debug\Elicom.pdb
+C:\Users\Domnin Dmitry\Desktop\Elicom\obj\Debug\Elicom.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\Elicom.dll
+C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\Elicom.pdb
+C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\uk\Elicom.resources.dll
+F:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\Elicom.dll
+F:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\Elicom.pdb
+F:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\uk\Elicom.resources.dll
+F:\OpenStore\фискальные драйвера\Elicom\obj\Debug\Elicom.csprojResolveAssemblyReference.cache
+F:\OpenStore\фискальные драйвера\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.resources
+F:\OpenStore\фискальные драйвера\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.uk.resources
+F:\OpenStore\фискальные драйвера\Elicom\obj\Debug\Elicom.csproj.GenerateResource.Cache
+F:\OpenStore\фискальные драйвера\Elicom\obj\Debug\uk\Elicom.resources.dll
+F:\OpenStore\фискальные драйвера\Elicom\obj\Debug\Elicom.dll
+F:\OpenStore\фискальные драйвера\Elicom\obj\Debug\Elicom.pdb
+F:\Program Files (x86)\OpenShow\OpenStore\V1\Bin\Elicom.dll
+F:\Program Files (x86)\OpenShow\OpenStore\V1\Bin\Elicom.pdb
+F:\Program Files (x86)\OpenShow\OpenStore\V1\Bin\uk\Elicom.resources.dll
+C:\Users\Dmitry Domnin\Desktop\Elicom\obj\Debug\Elicom.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry Domnin\Desktop\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.resources
+C:\Users\Dmitry Domnin\Desktop\Elicom\obj\Debug\Phoenix.Devices.Printers.Elicom.CultureStrings.uk.resources
+C:\Users\Dmitry Domnin\Desktop\Elicom\obj\Debug\Elicom.csproj.GenerateResource.Cache
+C:\Users\Dmitry Domnin\Desktop\Elicom\obj\Debug\uk\Elicom.resources.dll
+C:\Users\Dmitry Domnin\Desktop\Elicom\obj\Debug\Elicom.dll
+C:\Users\Dmitry Domnin\Desktop\Elicom\obj\Debug\Elicom.pdb
+C:\Program Files (x86)\OpenStore\Cloud\V1\Elicom.dll
+C:\Program Files (x86)\OpenStore\Cloud\V1\Elicom.pdb
+C:\Program Files (x86)\OpenStore\Cloud\V1\uk\Elicom.resources.dll
+C:\Program Files (x86)\OpenStore\Cloud\V1\Bin\Elicom.dll
+C:\Program Files (x86)\OpenStore\Cloud\V1\Bin\Elicom.pdb
+C:\Program Files (x86)\OpenStore\Cloud\V1\Bin\uk\Elicom.resources.dll

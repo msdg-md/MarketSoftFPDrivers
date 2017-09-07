@@ -1,0 +1,10 @@
+C:\Program Files (x86)\OpenStore\Cloud\V1\Bin\NewDatexDriver.dll
+C:\Program Files (x86)\OpenStore\Cloud\V1\Bin\NewDatexDriver.pdb
+C:\Program Files (x86)\OpenStore\Cloud\V1\Bin\uk\NewDatexDriver.resources.dll
+C:\Users\Dmitry Domnin\Desktop\NewDatexDriver\NewDatexDriver\NewDatexDriver\obj\Debug\NewDatexDriver.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry Domnin\Desktop\NewDatexDriver\NewDatexDriver\NewDatexDriver\obj\Debug\Phoenix.Devices.Printers.Datecs.DatecsStrings.resources
+C:\Users\Dmitry Domnin\Desktop\NewDatexDriver\NewDatexDriver\NewDatexDriver\obj\Debug\Phoenix.Devices.Printers.Datecs.DatecsStrings.uk.resources
+C:\Users\Dmitry Domnin\Desktop\NewDatexDriver\NewDatexDriver\NewDatexDriver\obj\Debug\NewDatexDriver.csproj.GenerateResource.Cache
+C:\Users\Dmitry Domnin\Desktop\NewDatexDriver\NewDatexDriver\NewDatexDriver\obj\Debug\uk\NewDatexDriver.resources.dll
+C:\Users\Dmitry Domnin\Desktop\NewDatexDriver\NewDatexDriver\NewDatexDriver\obj\Debug\NewDatexDriver.dll
+C:\Users\Dmitry Domnin\Desktop\NewDatexDriver\NewDatexDriver\NewDatexDriver\obj\Debug\NewDatexDriver.pdb

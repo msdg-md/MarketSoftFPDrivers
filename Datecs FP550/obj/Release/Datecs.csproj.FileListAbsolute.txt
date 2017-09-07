@@ -1,0 +1,16 @@
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Release\Datecs.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Release\Datecs.pdb
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Release\uk\Datecs.resources.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Release\DriverGlobals.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Release\Globals.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Release\IODrivers.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Release\SoftMarket.Devices.Printers.Datecs.DatecsStrings.resources
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Release\SoftMarket.Devices.Printers.Datecs.DatecsStrings.uk.resources
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Release\Datecs.csproj.GenerateResource.Cache
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Release\uk\Datecs.resources.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Release\Datecs.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Release\Datecs.pdb
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Release\Datecs.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\SoftMarket\Market+\v4\Datecs.dll
+C:\Program Files (x86)\SoftMarket\Market+\v4\Datecs.pdb
+C:\Program Files (x86)\SoftMarket\Market+\v4\uk\Datecs.resources.dll

@@ -1,0 +1,93 @@
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\Datecs.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\Datecs.pdb
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\uk\Datecs.resources.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\DriverGlobals.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\Globals.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\Interop.RASNativeLib.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\IODrivers.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\DriverGlobals.pdb
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\Globals.pdb
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\IODrivers.pdb
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\uk\DriverGlobals.resources.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\uk\Globals.resources.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\bin\Debug\uk\IODrivers.resources.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.resources
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.uk.resources
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\uk\Datecs.resources.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\Datecs.dll
+C:\Users\Dan\Desktop\Datecs\Datecs\obj\Debug\Datecs.pdb
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\Datecs.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\Datecs.pdb
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\uk\Datecs.resources.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\DriverGlobals.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\Globals.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\Interop.RASNativeLib.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\IODrivers.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\DriverGlobals.pdb
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\Globals.pdb
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\IODrivers.pdb
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\uk\DriverGlobals.resources.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\uk\Globals.resources.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\bin\Debug\uk\IODrivers.resources.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.resources
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.uk.resources
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\uk\Datecs.resources.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\Datecs.dll
+C:\Users\Victor\Desktop\Datecs\Datecs\obj\Debug\Datecs.pdb
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\Datecs.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\Datecs.pdb
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\uk\Datecs.resources.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\DriverGlobals.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\Globals.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\Interop.RASNativeLib.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\IODrivers.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\DriverGlobals.pdb
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\Globals.pdb
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\IODrivers.pdb
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\uk\DriverGlobals.resources.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\uk\Globals.resources.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\bin\Debug\uk\IODrivers.resources.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.resources
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.uk.resources
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\uk\Datecs.resources.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\Datecs.dll
+C:\Users\Dan\Desktop\New folder (2)\Datecs\Datecs\obj\Debug\Datecs.pdb
+C:\Users\Dan\Desktop\Datecs\bin\Debug\Datecs.dll
+C:\Users\Dan\Desktop\Datecs\bin\Debug\Datecs.pdb
+C:\Users\Dan\Desktop\Datecs\bin\Debug\uk\Datecs.resources.dll
+C:\Users\Dan\Desktop\Datecs\bin\Debug\DriverGlobals.dll
+C:\Users\Dan\Desktop\Datecs\bin\Debug\Globals.dll
+C:\Users\Dan\Desktop\Datecs\bin\Debug\IODrivers.dll
+C:\Users\Dan\Desktop\Datecs\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.resources
+C:\Users\Dan\Desktop\Datecs\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.uk.resources
+C:\Users\Dan\Desktop\Datecs\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Dan\Desktop\Datecs\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Dan\Desktop\Datecs\obj\Debug\uk\Datecs.resources.dll
+C:\Users\Dan\Desktop\Datecs\obj\Debug\Datecs.dll
+C:\Users\Dan\Desktop\Datecs\obj\Debug\Datecs.pdb
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Debug\Datecs.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Debug\Datecs.pdb
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Debug\uk\Datecs.resources.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Debug\DriverGlobals.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Debug\Globals.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\bin\Debug\IODrivers.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Debug\Datecs.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.resources
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Debug\SoftMarket.Devices.Printers.Datecs.DatecsStrings.uk.resources
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Debug\Datecs.csproj.GenerateResource.Cache
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Debug\uk\Datecs.resources.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Debug\Datecs.dll
+C:\Users\Dmitry Domnin\Desktop\Datecs FP550\obj\Debug\Datecs.pdb
+C:\Program Files (x86)\SoftMarket\Market+\v4\Datecs.dll
+C:\Program Files (x86)\SoftMarket\Market+\v4\Datecs.pdb
+C:\Program Files (x86)\SoftMarket\Market+\v4\uk\Datecs.resources.dll
