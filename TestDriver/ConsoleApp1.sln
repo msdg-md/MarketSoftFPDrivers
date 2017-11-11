@@ -5,6 +5,15 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{4B1520C1-93FF-4C37-B57C-BB188E9BDFF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATECS550TLib", "DATECS550TLib\DATECS550TLib.csproj", "{E6201E9F-BA32-45B7-9FC1-96795DE807E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{E5BDC5CE-C1CA-4C24-A8AC-0D452747B4CA}"
+	ProjectSection(SolutionItems) = preProject
+		lib\Wtdedit.dll = lib\Wtdedit.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printer", "Printer\Printer.csproj", "{46340F9B-0F13-4341-9D9A-7DC2171DD9AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,14 @@ Global
 		{4B1520C1-93FF-4C37-B57C-BB188E9BDFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B1520C1-93FF-4C37-B57C-BB188E9BDFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B1520C1-93FF-4C37-B57C-BB188E9BDFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6201E9F-BA32-45B7-9FC1-96795DE807E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6201E9F-BA32-45B7-9FC1-96795DE807E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6201E9F-BA32-45B7-9FC1-96795DE807E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6201E9F-BA32-45B7-9FC1-96795DE807E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46340F9B-0F13-4341-9D9A-7DC2171DD9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46340F9B-0F13-4341-9D9A-7DC2171DD9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46340F9B-0F13-4341-9D9A-7DC2171DD9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46340F9B-0F13-4341-9D9A-7DC2171DD9AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
