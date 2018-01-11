@@ -55,6 +55,7 @@
 
         protected bool printBottomCommentsOnTop;
         protected bool printZReportFull;
+        protected bool clearZReportScale;
         private int sleepAfterPositionPrint;
 
         protected virtual void AddSums(TaxGrp taxGrp, Money cost, Money discount, Money recDiscount)
@@ -588,20 +589,25 @@
             }
             foreach (string str in this.TrimComment(comments, 0x22))
             {
+                string txtStr = str;
+                if(txtStr.Equals("Номер чека"))
+                {
+                    txtStr = "Nr. Bon";
+                }
                 switch (this.checkType)
                 {
                     case PrinterReceiptType.Sales:
-                        this.Printer.PrintFiscalText(str);
+                        this.Printer.PrintFiscalText(txtStr);
                         break;
 
                     case PrinterReceiptType.Refund:
                     case PrinterReceiptType.Copy:
                     case PrinterReceiptType.Text:
                     case PrinterReceiptType.NoFiscalSales:
-                        this.Printer.PrintNonfiscalText(str);
+                        this.Printer.PrintNonfiscalText(txtStr);
                         break;
                     case PrinterReceiptType.NoFiscalRefund:
-                        this.Printer.PrintNonfiscalText(str);
+                        this.Printer.PrintNonfiscalText(txtStr);
                         break;
                 }
             }
@@ -738,11 +744,20 @@
 
                 case ReportType.ZReport:
                     this.Printer.PrintZReport();
+                    if(clearZReportScale)
+                    {
+                        ClearZReportScale();
+                    }
                     return;
 
                 case ReportType.ArtReport:
                     throw new FiscalPrinterException(DatecsStrings.GetString(0x1b));
             }
+        }
+
+        private void ClearZReportScale()
+        {
+           
         }
 
         public virtual void PrintReport(ReportType reportType, DateTime beginDate, DateTime endDate)
@@ -1093,7 +1108,11 @@
                     new Parameter(7, this.printZReportFull ? str : str2, new string[] {
                         str,
                         str2
-                    }, CultureStrings.PrintZReportFull)
+                    }, CultureStrings.PrintZReportFull),
+                    new Parameter(8, this.clearZReportScale ? str : str2, new string[] {
+                        str,
+                        str2
+                    }, DatecsStrings.GetString(55))
                 };
                 return list.ToArray();
             }
@@ -1121,6 +1140,10 @@
 
                         case 7:
                             this.printZReportFull = parameter.StringValue == DatecsStrings.GetString(50);
+                            break;
+
+                        case 8:
+                            this.clearZReportScale = parameter.StringValue == DatecsStrings.GetString(50);
                             break;
                     }
                 }

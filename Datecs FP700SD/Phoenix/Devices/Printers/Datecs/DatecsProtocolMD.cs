@@ -773,7 +773,7 @@ namespace Phoenix.Devices.Printers.DatecsMD
             SendCommand(Command.RegisterItem, message);
         }
 
-
+        private IList<Command> commandsNoStatusCheck = new List<Command> { Command.GetStatus, Command.PrintFiscalText, Command.PrintNonfiscalText, Command.PrintBarcode };
 
         /// <summary>
         /// Посылает комманду фискальному принтеру и возвращает результат выполнения комманды. 
@@ -803,7 +803,7 @@ namespace Phoenix.Devices.Printers.DatecsMD
         /// <returns>Результат выполнения комманды</returns>
         protected byte[] SendCommand(Command command, byte[] extendedData)
         {
-            if (command != Command.GetStatus && GetStatusEachCommand)
+            if ((!commandsNoStatusCheck.Contains(command)) && GetStatusEachCommand)
             {
                 try
                 {
@@ -916,9 +916,9 @@ namespace Phoenix.Devices.Printers.DatecsMD
         {
             if (header.Length > 0)
             {
-                SetHeaderFooter(0, header.Length > 0 ? header[0] : "");
-                SetHeaderFooter(1, header.Length > 1 ? header[1] : "");
-                SetHeaderFooter(2, header.Length > 2 ? header[2] : "");
+                SetHeaderFooter(0, header.Length > 0 ? header[0] : "Header requires minimum 3 rows");
+                SetHeaderFooter(1, header.Length > 1 ? header[1] : "Header requires minimum 3 rows");
+                SetHeaderFooter(2, header.Length > 2 ? header[2] : "Header requires minimum 3 rows");
                 SetHeaderFooter(3, header.Length > 3 ? header[3] : "");
                 SetHeaderFooter(4, header.Length > 4 ? header[4] : "");
                 SetHeaderFooter(5, header.Length > 5 ? header[5] : "");

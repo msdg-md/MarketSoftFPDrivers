@@ -15,8 +15,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\..\..\..\..\Program Files %28x86%29\OpenStore\OpenStore\V1\Bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
@@ -41,21 +41,21 @@
     </Compile>
     <Reference Include="DriverGlobals">
       <HintPath>references\DriverGlobals.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Globals">
       <HintPath>references\Globals.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.XML" />
     <Reference Include="WindowsBase">
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="IODrivers">
       <HintPath>references\IODrivers.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Global.cs" />
@@ -74,6 +74,7 @@
     <EmbeddedResource Include="Properties\DatecsStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DatecsStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
 </Project>
