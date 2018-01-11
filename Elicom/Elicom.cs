@@ -360,10 +360,10 @@ namespace Phoenix.Devices.Printers.Elicom
 
         public void PrintNullRec()
         {
-            Printer.OpenReceipt();
+            Printer.OpenNoFislalReceipt();
             Printer.PrintLine(CultureStrings.NullReceipt);
             // Printer.AutomaticCloseReceipt();
-            Printer.CloseReceipt();
+            Printer.CloseNoFislalReceipt();
         }
 
         public void ShowPaymentInfo(Money recSum, string recSumHint, Money changeSum, string changeSumHint)
