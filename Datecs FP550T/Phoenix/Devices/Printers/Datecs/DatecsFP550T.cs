@@ -549,6 +549,7 @@
 
         public virtual void Open(Port port)
         {
+            Log.Write($"Connect ({port.Number}:{baudrate})",Log.MessageType.Message, this);
             this.Printer.Connect(port, this.baudrate);
             this.Printer.GetStatus();
             this.InitFeatures();

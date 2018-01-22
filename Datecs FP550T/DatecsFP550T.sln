@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatecsMD", "DatecsMD.csproj", "{4E2D0B5E-345C-45C9-949A-8CA4E9CAA6AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatecsFP550TMD", "DatecsFP550TMD.csproj", "{4E2D0B5E-345C-45C9-949A-8CA4E9CAA6AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC02486F-4830-4B1C-9F9F-CB12D0EE9E26}
 	EndGlobalSection
 EndGlobal

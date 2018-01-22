@@ -403,7 +403,7 @@ namespace Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Datecs FP-700 MD.
+        ///   Looks up a localized string similar to Datecs FP-550T MD.
         /// </summary>
         internal static string _44 {
             get {
@@ -412,7 +412,7 @@ namespace Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Datecs FP3530T(1.10) md.
+        ///   Looks up a localized string similar to Datecs FP-550T md.
         /// </summary>
         internal static string _45 {
             get {

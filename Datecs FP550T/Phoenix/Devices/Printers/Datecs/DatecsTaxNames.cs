@@ -4,13 +4,11 @@
 
     public class DatecsTaxNames
     {
-        public const char TaxA = 'А';
-        public const char TaxB = 'Б';
-        public const char TaxC = 'В';
-        public const char TaxD = 'Г';
-        public const char TaxFree = '*';
-        public const char TaxFree3530T = 'Д';
-        public const char TaxMExellio = 'М';
+        public const char TaxA = 'A';
+        public const char TaxB = 'B';
+        public const char TaxC = 'C';
+        public const char TaxD = 'D';
+        public const char TaxFree = 'E';
     }
 }
 
