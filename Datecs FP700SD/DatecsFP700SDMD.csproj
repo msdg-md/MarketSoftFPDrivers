@@ -6,7 +6,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4E2D0B5E-345C-45C9-949A-8CA4E9CAA6AC}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <AssemblyName>DatecsMD</AssemblyName>
+    <AssemblyName>DatecsFP700SD</AssemblyName>
     <OutputType>Library</OutputType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
@@ -33,6 +33,8 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="Phoenix\AssemblySettings.cs" />
+    <Compile Include="Phoenix\DataManager.cs" />
     <Compile Include="Phoenix\Devices\Printers\Datecs\DatecsProtocolMD.cs" />
     <Compile Include="Properties\DatecsStrings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -47,8 +49,14 @@
       <HintPath>references\Globals.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MP2005Globals, Version=1.1.6513.26356, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\MP2005Globals.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase">
       <Private>False</Private>
     </Reference>
@@ -76,5 +84,10 @@
       <LastGenOutput>DatecsStrings.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatecsFP700SDMD.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

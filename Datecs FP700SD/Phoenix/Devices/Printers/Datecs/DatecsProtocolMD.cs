@@ -190,6 +190,9 @@ namespace Phoenix.Devices.Printers.DatecsMD
 
             comPort.Init(settings);
             Log.Write(String.Format("Соединение с фискальным принтером: СОМ{0}", port.Number), Log.MessageType.Message, this);
+            AssemblySettings.loadConfiguration();
+            AreaID = new DataManager().getAreaId();
+            Log.Write($"config { AssemblySettings.ConfigurationInstance[AssemblySettings.ScaleDBConnection]}", Log.MessageType.Message, this);
 
             comPort.Open(port.Number);
         }
@@ -658,6 +661,7 @@ namespace Phoenix.Devices.Printers.DatecsMD
         {
             Log.Write("PrintXReport Command.FiscalClosure = 0", Globals.Log.MessageType.Message, this);
             SendCommand(Command.FiscalClosure, "0");
+            new DataManager().RecordZReport(AreaID);
         }
 
         public virtual void PrintZReport(DateTime beginDate, DateTime endDate)
@@ -774,6 +778,7 @@ namespace Phoenix.Devices.Printers.DatecsMD
         }
 
         private IList<Command> commandsNoStatusCheck = new List<Command> { Command.GetStatus, Command.PrintFiscalText, Command.PrintNonfiscalText, Command.PrintBarcode };
+        private int AreaID;
 
         /// <summary>
         /// Посылает комманду фискальному принтеру и возвращает результат выполнения комманды. 
