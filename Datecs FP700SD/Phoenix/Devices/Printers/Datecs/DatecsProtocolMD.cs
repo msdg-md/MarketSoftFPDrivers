@@ -6,6 +6,7 @@ using Phoenix.Globals.Units;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 
@@ -190,10 +191,11 @@ namespace Phoenix.Devices.Printers.DatecsMD
 
             comPort.Init(settings);
             Log.Write(String.Format("Соединение с фискальным принтером: СОМ{0}", port.Number), Log.MessageType.Message, this);
+            Log.Write($"config path {Assembly.GetCallingAssembly().Location}", Log.MessageType.Message, this);
             AssemblySettings.loadConfiguration();
             AreaID = new DataManager().getAreaId();
             Log.Write($"config { AssemblySettings.ConfigurationInstance[AssemblySettings.ScaleDBConnection]}", Log.MessageType.Message, this);
-
+            //
             comPort.Open(port.Number);
         }
 

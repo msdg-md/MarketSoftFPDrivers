@@ -982,7 +982,7 @@
             DatecsStrings.GetString(0x2c);
 
         public virtual string DeviceName =>
-            "A38EDF44-B9FA-4b37-917D-379439674010";
+            "B185A96E-56FC-4F48-848A-3F790A1A077A";
 
         public PrinterFeatures Features =>
             this.features;
