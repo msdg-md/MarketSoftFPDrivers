@@ -2,11 +2,13 @@
 using Phoenix.Devices.IO;
 using Phoenix.Devices.IO.COMPort;
 using Phoenix.Devices.Printers;
+using Phoenix.Devices.Printers.Datecs;
 using Phoenix.Globals;
 using Phoenix.Globals.Units;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 
@@ -76,7 +78,9 @@ namespace Phoenix.Devices.Printers.DatecsMD
 
             comPort.Init(settings);
             Log.Write(String.Format("Соединение с фискальным принтером: СОМ{0}", port.Number), Log.MessageType.Message, this);
-
+            AssemblySettings.loadConfiguration();
+            AreaID = new DataManager().getAreaId();
+            Log.Write($"config { AssemblySettings.ConfigurationInstance[AssemblySettings.ScaleDBConnection]}", Log.MessageType.Message, this);
             comPort.Open(port.Number);
         }
         /// <summary>
@@ -679,6 +683,7 @@ namespace Phoenix.Devices.Printers.DatecsMD
         {
             Log.Write("PrintXReport Command.FiscalClosure = 0", Log.MessageType.Message, this);
             SendCommand(Command.FiscalClosure, "0");
+            new DataManager().RecordZReport(AreaID);
         }
         public virtual void PrintZReport(DateTime beginDate, DateTime endDate)
         {
@@ -859,6 +864,9 @@ namespace Phoenix.Devices.Printers.DatecsMD
                 return int.Parse(GetParameter(data, 0)) == 0;
             }
         }
+
+        public int AreaID { get; private set; }
+
         public void VoidSell(Money summa, TaxGrp taxGrp, string comment)
         {
             if (comment.Length > Const.MaxArticleString)

@@ -2,6 +2,7 @@
 {
     using Phoenix.Devices;
     using Phoenix.Devices.Printers;
+    using Phoenix.Devices.Printers.Datecs;
     using Phoenix.Globals;
     using Phoenix.Globals.Units;
     using Phoenix.PrintService.Templates;
@@ -1069,12 +1070,15 @@
         {
             get
             {
+                /*Because 110 command does not work
                 if (!this.IsOpened)
                 {
                     throw new FiscalPrinterException(DatecsStrings.GetString(0x11));
                 }
                 int num = this.Printer.GetLastFiscalClosure() + 1;
                 return num.ToString();
+                */
+                return "0";
             }
         }
 
@@ -1226,12 +1230,15 @@
                 {
                     throw new FiscalPrinterException(DatecsStrings.GetString(0x11));
                 }
+                /*Because 110 command does not work
                 if (!this.addPaymentSums)
                 {
                     return this.Printer.GetSalesSumByTax();
                 }
-                //return (this.Printer.GetSalesSumByTax() + ";" + this.Printer.GetSalesSumByPayment());
-                return this.Printer.GetSalesSumByPayment();
+                return (this.Printer.GetSalesSumByTax() + ";" + this.Printer.GetSalesSumByPayment());
+                 this.Printer.GetSalesSumByPayment();
+                */
+                return "0";
             }
         }
 

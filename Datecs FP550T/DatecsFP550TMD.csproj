@@ -33,7 +33,9 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="Phoenix\Devices\Printers\Datecs\DataManager.cs" />
     <Compile Include="Phoenix\Devices\Printers\Datecs\DatecsProtocolMD.cs" />
+    <Compile Include="Phoenix\AssemblySettings.cs" />
     <Compile Include="Properties\DatecsStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -43,12 +45,20 @@
       <HintPath>references\DriverGlobals.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Globals">
+    <Reference Include="Globals, Version=5.0.5799.29199, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>references\Globals.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MP2005Globals, Version=1.1.6513.26356, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\MP2005Globals.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase">
       <Private>False</Private>
     </Reference>
@@ -76,5 +86,10 @@
       <LastGenOutput>DatecsStrings.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatecsFP550TMD.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
