@@ -5,6 +5,7 @@ using SoftMarket.Globals.Units;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 
 namespace SoftMarket.Devices.Printers.Elicom
 {
@@ -438,7 +439,9 @@ namespace SoftMarket.Devices.Printers.Elicom
             int receiptNum;
 
             if (int.TryParse(SendPacket(new Packet(Commands.GetLastZRepNum))[1], out receiptNum))
+            {
                 return receiptNum;
+            }
             else
                 return 0;
         }
@@ -450,9 +453,10 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintZReport()
         {
+            Thread.Sleep(2500);
             SendPacket(new Packet(Commands.DailyFiscalReport, "Z"));
-        }
 
+        }
 
         public void CashIn(Money sum)
         {

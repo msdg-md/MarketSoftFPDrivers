@@ -36,9 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DriverGlobals, Version=2.0.4951.28154, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DriverGlobals, Version=2.0.4554.35517, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\SoftMarket\Market+\v4\DriverGlobals.dll</HintPath>
+      <HintPath>Soft.Vistracom\DriverGlobals.dll</HintPath>
     </Reference>
     <Reference Include="Globals, Version=2.0.4889.39296, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
