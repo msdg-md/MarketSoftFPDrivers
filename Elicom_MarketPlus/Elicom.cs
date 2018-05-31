@@ -406,7 +406,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                     //Printer.PrintLine(CashierString);
                     Printer.PrintLine(cash);
                     //Printer.PrintLine(comment);
-                    Printer.PrintLine("_");
+                    Printer.PrintLine(string.Empty);
                     break;
                 case ReceiptType.Refund:
                     Printer.OpenNoFislalReceipt();
@@ -433,7 +433,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                     Printer.PrintLine(cash);
                     Printer.PrintLine(CultureStrings.CopyNo + recNum);
                     Printer.PrintLine(comment);
-                    Printer.PrintLine("");
+                    Printer.PrintLine(string.Empty);
                     break;
                 case ReceiptType.NoFiscalSales:
                     Printer.OpenNoFislalReceipt();
@@ -443,7 +443,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                     Printer.PrintLine(cash);
                     Printer.PrintLine(recNumberForNoFiscalReceipt + " " + systemRecNum);
                     Printer.PrintLine(comment);
-                    Printer.PrintLine("");
+                    Printer.PrintLine(string.Empty);
                     break;
                 case ReceiptType.NoFiscalRefund:
                     Printer.OpenNoFislalReceipt();
@@ -453,7 +453,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                     Printer.PrintLine(cash);
                     Printer.PrintLine(CultureStrings.RefundByReceipt + recNum);
                     Printer.PrintLine(comment);
-                    Printer.PrintLine("");
+                    Printer.PrintLine(string.Empty);
                     break;
                 case ReceiptType.Text:
                     Printer.OpenNoFislalReceipt();
@@ -870,7 +870,7 @@ namespace SoftMarket.Devices.Printers.Elicom
 
             Printer.PrintLine(ConcatStrings(CultureStrings.GetSum, "=" + payment.TotalSum.ToString("F"), Consts.TextDocLineLength));
             Printer.PrintLine(ConcatStrings(CultureStrings.RestSum, "=" + (payment.TotalSum - receiptSum).ToString("F"), Consts.TextDocLineLength));
-            Printer.PrintLine("");
+            Printer.PrintLine("  ");
             //Printer.PrintLine(StringToRight(Printer.GetDateTime().ToString("dd-MM-yy HH:mm"), Consts.TextDocLineLength));
             // Printer.PrintLine(ConcatStrings("   Ã", Printer.GetSerialNum(), Consts.TextDocLineLength));
         }

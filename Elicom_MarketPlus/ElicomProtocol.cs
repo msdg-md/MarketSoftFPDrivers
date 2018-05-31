@@ -512,8 +512,8 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintLine(string line)
         {
-            if (line == null)
-                line = string.Empty;
+            if (string.IsNullOrEmpty(line))
+                line = "  ";
 
             if (line.Length > Consts.TextDocLineLength)
                 line = line.Substring(0, Consts.TextDocLineLength);
