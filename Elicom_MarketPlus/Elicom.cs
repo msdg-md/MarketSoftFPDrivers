@@ -340,7 +340,7 @@ namespace SoftMarket.Devices.Printers.Elicom
         public void PrintBottomComment(string[] comments)
         {
             if (comments.Length > 0)
-                Printer.PrintLine("");
+                Printer.PrintLine("   ");
 
             foreach (string comment in TrimComment(comments, features.TextDocLineLength))
                 Printer.PrintLine(comment);

@@ -168,7 +168,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                 if (!answer.IsACKPacket && answer.Command != packet.Command)
                     throw new FiscalPrinterException(CultureStrings.ProtocolError);
 
-                if (answer.CommandNumber != packet.CommandNumber)
+                if (answer.CommandNumber != (packet.CommandNumber + 0x20))
                     throw new FiscalPrinterException(CultureStrings.ProtocolError);
             }
             catch (COMPortException err)
