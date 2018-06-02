@@ -22,6 +22,8 @@ namespace SoftMarket.Devices.Printers.Elicom
         public const byte GetLastReceiptNum = 0x71;
         public const byte GetLastZRepNum = 0x73;
         public const byte DailyFiscalReport = 0x7C;
+        public const byte DailyFiscalReportByNmbOfBlocks = 0x79;
+        public const byte DailyFiscalReportByDate = 0x7A;
         public const byte CashIO = 0x3B;
         public const byte GetSumsByPaymetType = 0x6E;
         public const byte SetHeaderFooter = 0x49;

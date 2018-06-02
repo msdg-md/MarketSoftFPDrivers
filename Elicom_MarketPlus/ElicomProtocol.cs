@@ -453,9 +453,9 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintZReport()
         {
-            Thread.Sleep(2500);
+            Thread.Sleep(3500);
             SendPacket(new Packet(Commands.DailyFiscalReport, "Z"));
-
+            Thread.Sleep(3500);
         }
 
         public void CashIn(Money sum)
@@ -624,26 +624,8 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintBarcode(string barcode)
         {
-            SendPacket(new Packet(Commands.Barcode, "D"));
-
-            //if (string.IsNullOrEmpty(barcode))
-            //{
-            //    SendPacket(new Packet(Commands.Barcode, "D"));
-            //    return;
-            //}
-
-            //if (barcode.Length > 12)
-            //    barcode = barcode.Substring(0, 12);
-
-            //Packet packet = new Packet(Commands.Barcode);
-            //packet.AddMessage("P");
-            //packet.AddMessage("I");
-            //packet.AddMessage((barcode.Length <= 9 ? "0" : "") + barcode.Length.ToString());
-            //packet.AddMessage(barcode);
-            //SendPacket(packet);
-
-            //SendPacket(new Packet(Commands.Barcode, "D"));
-      }
+            SendPacket(new Packet(Commands.Barcode, string.Format("P;H;{0};{1}", barcode.Length, barcode))); //CODE_93 barcode
+        }
 
         public void PrintArtReport()
         {
@@ -652,9 +634,7 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintReportByNumber(int beginNum, int endNum)
         {
-            Packet packet = new Packet(Commands.DailyFiscalReport);
-            packet.AddMessage("J1");
-            packet.AddMessage("Z");
+            Packet packet = new Packet(Commands.DailyFiscalReportByNmbOfBlocks);
             packet.AddMessage(beginNum.ToString("0000"));
             packet.AddMessage(endNum.ToString("0000"));
 
@@ -663,9 +643,7 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintReportByDate(DateTime beginDate, DateTime endDate)
         {
-            Packet packet = new Packet(Commands.DailyFiscalReport);
-            packet.AddMessage("J1");
-            packet.AddMessage("D");
+            Packet packet = new Packet(Commands.DailyFiscalReportByDate);
             packet.AddMessage(beginDate.ToString("ddMMyy"));
             packet.AddMessage(endDate.ToString("ddMMyy"));
 

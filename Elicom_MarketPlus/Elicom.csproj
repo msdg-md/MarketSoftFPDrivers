@@ -38,15 +38,15 @@
   <ItemGroup>
     <Reference Include="DriverGlobals, Version=2.0.5652.25986, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\SoftMarket\Market+\v4\DriverGlobals.dll</HintPath>
+      <HintPath>Soft.Vistracom\DriverGlobals.dll</HintPath>
     </Reference>
     <Reference Include="Globals, Version=2.0.4554.35476, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\SoftMarket\Market+\v4\Globals.dll</HintPath>
+      <HintPath>Soft.Vistracom\Globals.dll</HintPath>
     </Reference>
     <Reference Include="IODrivers, Version=2.0.5686.22079, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\SoftMarket\Market+\v4\IODrivers.dll</HintPath>
+      <HintPath>Soft.Vistracom\IODrivers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
