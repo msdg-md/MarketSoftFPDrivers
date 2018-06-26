@@ -39,14 +39,17 @@
     <Reference Include="DriverGlobals, Version=2.0.5652.25986, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Soft.Vistracom\DriverGlobals.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Globals, Version=2.0.4554.35476, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Globals, Version=2.0.5002.38791, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Soft.Vistracom\Globals.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="IODrivers, Version=2.0.5686.22079, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Soft.Vistracom\IODrivers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

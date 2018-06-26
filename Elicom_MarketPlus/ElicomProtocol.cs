@@ -19,7 +19,7 @@ namespace SoftMarket.Devices.Printers.Elicom
         private Parity parity;
         private StopBits stopbits;
         private bool isOpen = false;
-        protected int timeoutAnswer = 2;
+        protected int timeoutAnswer = 5;
         private int trySendCount = 1;
         private byte lastCommandNumber = 0;
 
@@ -38,10 +38,10 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void Connect()
         {
-            Connect(port, baudrate, databits, flowControl, parity, stopbits);
+            Connect(port, baudrate, databits, flowControl, parity, stopbits, timeoutAnswer);
         }
 
-        public void Connect(Port port, uint baudrate, byte databits, FlowControl flowControl, Parity parity, StopBits stopbits)
+        public void Connect(Port port, uint baudrate, byte databits, FlowControl flowControl, Parity parity, StopBits stopbits, int printerAnswerTimeout)
         {
             if (port.Type != PortType.COM)
                 throw new DeviceException(CultureStrings.PortTypeCorrupt);
@@ -52,6 +52,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             this.flowControl = flowControl;
             this.parity = parity;
             this.stopbits = stopbits;
+            this.timeoutAnswer = printerAnswerTimeout;
 
             ComPortSettings settings = new ComPortSettings();
 
@@ -255,7 +256,9 @@ namespace SoftMarket.Devices.Printers.Elicom
                     }
                     catch (Exception err)
                     {
+                        Log.Write(string.Format("Command={0}", packet.Command), Log.MessageType.Message, null);
                         Log.Write(err, null);
+
                         if (++tryPos > trySendCount)
                             throw;
                         // new FiscalPrinterException(CultureStrings.RecivedNAK);
@@ -287,6 +290,8 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         private Packet ReadAnswer()
         {
+            //Log.Write(string.Format("timeout = {0}", timeoutAnswer), Log.MessageType.Message, null);
+
             DateTime endTime = DateTime.Now.AddSeconds(timeoutAnswer);
             List<byte> answer = new List<byte>();
 

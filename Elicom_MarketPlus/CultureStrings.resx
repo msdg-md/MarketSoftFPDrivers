@@ -384,4 +384,7 @@
   <data name="StandartPrinting" xml:space="preserve">
     <value>Стандартная печать</value>
   </data>
+  <data name="TimeoutParameterName" xml:space="preserve">
+    <value>Таймаут принтера</value>
+  </data>
 </root>

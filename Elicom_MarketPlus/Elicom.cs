@@ -14,6 +14,7 @@ namespace SoftMarket.Devices.Printers.Elicom
         #region Members
 
         protected uint baudrate;
+        protected int timeout;
         protected FlowControl flowControl;
         protected Parity parity;
         protected byte databits;
@@ -50,6 +51,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             flowControl = FlowControl.None;
             parity = Parity.None;
             stopbits = StopBits.One;
+            timeout = 5;
         }
 
         #endregion
@@ -698,6 +700,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                 parameters.Add(new Parameter((int)SettingsParameter.FlowControl, flowControl.ToString(), new string[] { FlowControl.None.ToString(), FlowControl.Hardware.ToString(), FlowControl.XOnXOff.ToString() }, CultureStrings.FlowControlDescription));
                 parameters.Add(new Parameter((int)SettingsParameter.StopBits, stopbits.ToString(), new string[] { StopBits.One.ToString(), StopBits.OneAndHalf.ToString(), StopBits.Two.ToString() }, CultureStrings.StopBitsDescription));
                 parameters.Add(new Parameter((int)SettingsParameter.Parity, parity.ToString(), new string[] { Parity.Even.ToString(), Parity.Mark.ToString(), Parity.None.ToString(), Parity.Odd.ToString(), Parity.Space.ToString() }, CultureStrings.ParityDescription));
+                parameters.Add(new Parameter((int)SettingsParameter.Timeout, timeout, 2, 30, CultureStrings.TimeoutParameterName));
 
                 return parameters.ToArray();
             }
@@ -723,6 +726,9 @@ namespace SoftMarket.Devices.Printers.Elicom
                         case (int)SettingsParameter.StopBits:
                             stopbits = (StopBits)Enum.Parse(typeof(StopBits), parameter.StringValue, true);
                             break;
+                        case (int)SettingsParameter.Timeout:
+                            timeout = parameter.IntValue;
+                            break;
                     }
                 }
             }
@@ -735,7 +741,7 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void Open(Port port)
         {
-            Printer.Connect(port, baudrate, databits, flowControl, parity, stopbits);
+            Printer.Connect(port, baudrate, databits, flowControl, parity, stopbits, timeout);
             Printer.GetStatus();
 
             features.OnlineMode = false;
@@ -902,6 +908,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             Parity = 4,
             StopBits = 5,
             IsStandartPrinting = 6,
+            Timeout = 7
         }
 
         protected class ItemInfo

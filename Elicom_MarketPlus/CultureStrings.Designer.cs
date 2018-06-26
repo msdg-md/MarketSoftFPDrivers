@@ -754,6 +754,15 @@ namespace SoftMarket.Devices.Printers.Elicom {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Таймаут принтера.
+        /// </summary>
+        internal static string TimeoutParameterName {
+            get {
+                return ResourceManager.GetString("TimeoutParameterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ИТОГ.
         /// </summary>
         internal static string Total {
