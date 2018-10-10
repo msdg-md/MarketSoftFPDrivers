@@ -133,7 +133,7 @@
     <value>Кассир</value>
   </data>
   <data name="CashNo" xml:space="preserve">
-    <value>Касcа № </value>
+    <value>Casa Nr. </value>
   </data>
   <data name="Check" xml:space="preserve">
     <value>ЧЕКОМ</value>
@@ -286,10 +286,10 @@
     <value>Не удалось закрыть чек. Недостаточная сумма для оплаты.</value>
   </data>
   <data name="NullRec" xml:space="preserve">
-    <value>Нулевой чек</value>
+    <value>Cec null</value>
   </data>
   <data name="NullReceipt" xml:space="preserve">
-    <value>НУЛЕВОЙ ЧЕК</value>
+    <value>CEC NULL</value>
   </data>
   <data name="PaperOutError" xml:space="preserve">
     <value>Нет бумаги</value>

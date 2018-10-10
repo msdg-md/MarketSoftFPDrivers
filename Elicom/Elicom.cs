@@ -936,6 +936,12 @@ namespace Phoenix.Devices.Printers.Elicom
 
         private void PaymentCheck(PrinterPayment payment)
         {
+            if (payment.GetSum(PaymentType.Ext2) != new Money(0))
+                Printer.Payment(payment.GetSum(PaymentType.Ext2), PaymentType.Ext2);
+
+            if (payment.GetSum(PaymentType.Ext3) != new Money(0))
+                Printer.Payment(payment.GetSum(PaymentType.Ext3), PaymentType.Ext3);
+
             if (payment.GetSum(PaymentType.Credit) != new Money(0))
                 Printer.Payment(payment.GetSum(PaymentType.Credit), PaymentType.Credit);
 

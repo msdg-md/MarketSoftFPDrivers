@@ -457,6 +457,10 @@ namespace Phoenix.Devices.Printers.Elicom
                     return "2";
                 case PaymentType.Credit:
                     return "3";
+                case PaymentType.Ext2:
+                    return "6";
+                case PaymentType.Ext3:
+                    return "5";
                 default:
                     throw new FiscalPrinterException(CultureStrings.UnknownPaymentType);
             }
