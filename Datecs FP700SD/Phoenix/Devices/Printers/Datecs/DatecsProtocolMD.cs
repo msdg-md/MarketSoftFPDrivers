@@ -968,6 +968,12 @@ namespace Phoenix.Devices.Printers.DatecsMD
                 case PaymentType.Credit:
                     paymentType = DatecsPaymentTypes.Credit;
                     break;
+                case PaymentType.Ext2:
+                    paymentType = DatecsPaymentTypes.TMH;
+                    break;
+                case PaymentType.Ext3:
+                    paymentType = DatecsPaymentTypes.TME;
+                    break;
             }
 
             string message = string.Format("{0}\t{1}{2}", comment, paymentType, summa.ToString("F"));

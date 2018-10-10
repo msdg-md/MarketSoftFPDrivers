@@ -15,7 +15,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\Program Files %28x86%29\OpenStore\OpenStore\V1\Bin\</OutputPath>
+    <OutputPath>C:\Program Files %28x86%29\OpenStore\OpenStore\V1\Bin\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,17 +41,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatecsStrings.resx</DependentUpon>
     </Compile>
-    <Reference Include="DriverGlobals">
-      <HintPath>references\DriverGlobals.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Globals">
-      <HintPath>references\Globals.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MP2005Globals, Version=1.1.6513.26356, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DriverGlobals, Version=2.0.6760.37066, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>references\MP2005Globals.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\DriverGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals, Version=5.0.6718.35, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="IODrivers, Version=2.0.5798.32292, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\IODrivers.dll</HintPath>
+    </Reference>
+    <Reference Include="MP2005Globals, Version=1.1.6852.33034, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\MP2005Globals.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -61,10 +65,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="IODrivers">
-      <HintPath>references\IODrivers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Phoenix\Devices\Printers\Datecs\Message.cs" />

@@ -351,7 +351,7 @@
             {
                 if (this.closeReceiptStep == 0)
                 {
-                 //   this.SetReceiptDiscount();
+                    //   this.SetReceiptDiscount();
                     this.closeReceiptStep++;
                 }
                 if (this.closeReceiptStep == 1)
@@ -387,6 +387,22 @@
                     this.closeReceiptStep++;
                 }
                 if (this.closeReceiptStep == 5)
+                {
+                    if (payment.GetSum(PaymentType.Ext2) != new Money(0))
+                    {
+                        this.Printer.Total(payment.GetSum(PaymentType.Ext2), PaymentType.Ext2, comment);
+                    }
+                    this.closeReceiptStep++;
+                }
+                if (this.closeReceiptStep == 6)
+                {
+                    if (payment.GetSum(PaymentType.Ext3) != new Money(0))
+                    {
+                        this.Printer.Total(payment.GetSum(PaymentType.Ext3), PaymentType.Ext3, comment);
+                    }
+                    this.closeReceiptStep++;
+                }
+                if (this.closeReceiptStep == 7)
                 {
                     this.Printer.CloseFiscalReceipt();
                     this.closeReceiptStep++;
