@@ -410,13 +410,13 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void SetCashierName(string cashierName)
         {
-            cashierName = NormalizeString(cashierName, 20);
+            //cashierName = NormalizeString(cashierName, 20);
 
-            Packet packet = new Packet(Commands.SetCashierName);
-            packet.AddMessage("1");
-            packet.AddMessage(cashierName);
-            packet.AddMessage(Consts.CashierPassword);
-            SendPacket(packet);
+            //Packet packet = new Packet(Commands.SetCashierName);
+            //packet.AddMessage("1");
+            //packet.AddMessage(cashierName);
+            //packet.AddMessage(Consts.CashierPassword);
+            //SendPacket(packet);
         }
 
         public string GetCashierName()
@@ -490,11 +490,11 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void SetHeaderFooter(int lineNum, string line)
         {
-            Packet packet = new Packet(Commands.SetHeaderFooter);
-            packet.AddMessage(lineNum.ToString());
-            packet.AddMessage(NormalizeString(line, 38));
+            //Packet packet = new Packet(Commands.SetHeaderFooter);
+            //packet.AddMessage(lineNum.ToString());
+            //packet.AddMessage(NormalizeString(line, 38));
 
-            SendPacket(packet);
+            //SendPacket(packet);
         }
 
         public void CancelReceipt()

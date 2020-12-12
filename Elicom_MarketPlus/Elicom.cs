@@ -321,14 +321,14 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void ShowPaymentInfo(Money recSum, string recSumHint, Money changeSum, string changeSumHint)
         {
-            //Printer.ShowDisplayLine(ConcatStrings(recSumHint, recSum.ToString("F"), Consts.DisplayTextLength), DisplayLineType.Top);
-            //Printer.ShowDisplayLine(ConcatStrings(changeSumHint, changeSum.ToString("F"), Consts.DisplayTextLength), DisplayLineType.Bootom);
+            Printer.ShowDisplayLine(ConcatStrings(recSumHint, recSum.ToString("F"), Consts.DisplayTextLength), DisplayLineType.Top);
+            Printer.ShowDisplayLine(ConcatStrings(changeSumHint, changeSum.ToString("F"), Consts.DisplayTextLength), DisplayLineType.Bootom);
         }
 
         public void ShowItemInfo(string itemName, Quantity itemCount, Money itemCost, Money recSum)
         {
-            //Printer.ShowDisplayLine(ConcatStrings(itemName.ToString(), itemCount.ToString(), Consts.DisplayTextLength), DisplayLineType.Top);
-            //Printer.ShowDisplayLine(ConcatStrings(itemCost.ToString("F"), recSum.ToString("F"), Consts.DisplayTextLength), DisplayLineType.Bootom);
+            Printer.ShowDisplayLine(ConcatStrings(itemName.ToString(), itemCount.ToString(), Consts.DisplayTextLength), DisplayLineType.Top);
+            Printer.ShowDisplayLine(ConcatStrings(itemCost.ToString("F"), recSum.ToString("F"), Consts.DisplayTextLength), DisplayLineType.Bootom);
         }
 
         public void PrintBarcode(string barcode)
@@ -809,7 +809,8 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         private void PrintBarcode()
         {
-            Printer.PrintBarcode(barcode);
+            if (!string.IsNullOrEmpty(barcode))
+                Printer.PrintBarcode(barcode);
         }
 
         private string ConcatStrings(string str1, string str2, int maxLen)
