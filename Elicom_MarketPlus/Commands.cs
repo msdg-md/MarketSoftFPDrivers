@@ -40,6 +40,8 @@ namespace SoftMarket.Devices.Printers.Elicom
         public const byte ArtReport = 0x7E;
         public const byte ReadTax = 0x62;
         public const byte SetLogo = 0x4C;
+
+        public const byte ReadAmountsByVATGroups = 0x6D;
         //public const byte Payment = 0x60;
         //public const byte Payment = 0x60;
     }

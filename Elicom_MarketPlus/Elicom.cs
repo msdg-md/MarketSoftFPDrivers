@@ -570,6 +570,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             }
         }
 
+        //-----
         public string RefundSumByTax
         {
             get
@@ -577,15 +578,21 @@ namespace SoftMarket.Devices.Printers.Elicom
                 return "";
             }
         }
-
+        
+        //-----
         public string SalesSumByTax
         {
             get
             {
-                return "";
+                if (!IsOpened)
+                    throw new FiscalPrinterException(CultureStrings.PrinterNotOpen);
+
+                //A,B,C,D,E;1,2,3,4,5,6
+                return $"{printer.GetSumByTax(false)};{printer.GetSalesSumByPayment()}";
             }
         }
 
+        //-----
         public Money SalesSum
         {
             get
@@ -594,6 +601,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             }
         }
 
+        //-----
         public Money RefundSum
         {
             get

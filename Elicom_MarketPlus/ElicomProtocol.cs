@@ -584,8 +584,12 @@ namespace SoftMarket.Devices.Printers.Elicom
                     return "2";
                 case PaymentType.Credit:
                     return "3";
+                case PaymentType.Ext1:
+                    return "5";
+                case PaymentType.Ext2:
+                    return "6";
                 default:
-                    throw new FiscalPrinterException(CultureStrings.UnknownPaymentType);
+                    throw new FiscalPrinterException($"{CultureStrings.UnknownPaymentType} - {paymentType}");
             }
 
         }
@@ -678,5 +682,37 @@ namespace SoftMarket.Devices.Printers.Elicom
         protected virtual void CheckPrinterStatus()
         {
         }
+
+        public string GetSumByTax(bool refund)
+        {
+            Log.Write("Получение сумм " + (refund ? "возвратов" : "продаж") + " по группам налогообложения.", Log.MessageType.Info, this);
+
+            string[] sums = SendPacket(new Packet(Commands.ReadAmountsByVATGroups));
+
+            if (sums.Length < 1)
+                throw new FiscalPrinterException(CultureStrings.UnknownError);
+
+            return $"{sums[0]},{sums[1]},{sums[2]},{sums[3]},{sums[4]}";
+
+        }
+        public string GetSalesSumByPayment()
+        {
+            Log.Write($"Получение сумм продаж по типам оплат.", Log.MessageType.Info, this);
+
+            string[] data = SendPacket(new Packet(Commands.GetSumsByPaymetType, "0"));
+
+
+
+            if (data.Length < 1)
+
+                throw new FiscalPrinterException(CultureStrings.UnknownError);
+
+
+
+            return $"{data[1]},{data[2]},{data[3]},{data[4]},{data[5]},{data[6]}";
+
+        }
+
+        public string GetRefundSumByPayment() => "";
     }
 }
