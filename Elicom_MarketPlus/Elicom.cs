@@ -903,6 +903,14 @@ namespace SoftMarket.Devices.Printers.Elicom
 
             if (payment.GetSum(PaymentType.Cash) != new Money(0))
                 Printer.Payment(payment.GetSum(PaymentType.Cash), PaymentType.Cash);
+
+           ////////////////////////////////////////////////////////////////////////////////
+
+            if (payment.GetSum(PaymentType.Ext1) != new Money(0))
+                Printer.Payment(payment.GetSum(PaymentType.Ext1), PaymentType.Ext1);
+
+            if (payment.GetSum(PaymentType.Ext2) != new Money(0))
+                Printer.Payment(payment.GetSum(PaymentType.Ext2), PaymentType.Ext1);
         }
 
         #endregion
