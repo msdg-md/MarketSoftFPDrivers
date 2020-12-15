@@ -584,11 +584,14 @@ namespace SoftMarket.Devices.Printers.Elicom
         {
             get
             {
-                if (!IsOpened)
-                    throw new FiscalPrinterException(CultureStrings.PrinterNotOpen);
+                //if (!IsOpened)
+                //    throw new FiscalPrinterException(CultureStrings.PrinterNotOpen);
 
                 //A,B,C,D,E;1,2,3,4,5,6
-                return $"{printer.GetSumByTax(false)};{printer.GetSalesSumByPayment()}";
+                string zValue = $"{Printer.GetSumByTax(false)};{Printer.GetSalesSumByPayment()}";
+                Log.Write("SalesSumByTax - " + zValue, Log.MessageType.Warning, null);
+
+                return zValue;
             }
         }
 

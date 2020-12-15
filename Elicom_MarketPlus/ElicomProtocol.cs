@@ -685,19 +685,20 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public string GetSumByTax(bool refund)
         {
-            Log.Write("Получение сумм " + (refund ? "возвратов" : "продаж") + " по группам налогообложения.", Log.MessageType.Info, this);
+            Log.Write("Получение сумм " + (refund ? "возвратов" : "продаж") + " по группам налогообложения.", Log.MessageType.Warning, this);
 
             string[] sums = SendPacket(new Packet(Commands.ReadAmountsByVATGroups));
 
             if (sums.Length < 1)
                 throw new FiscalPrinterException(CultureStrings.UnknownError);
 
-            return $"{sums[0]},{sums[1]},{sums[2]},{sums[3]},{sums[4]}";
+            //return $"{sums[0].Trim()},{sums[1].Trim()},{sums[2].Trim()},{sums[3].Trim()},{sums[4].Trim()}";
+            return $"{formatInt(sums[0])},{formatInt(sums[1])},{formatInt(sums[2])},{formatInt(sums[3])},{formatInt(sums[4])}";
 
         }
         public string GetSalesSumByPayment()
         {
-            Log.Write($"Получение сумм продаж по типам оплат.", Log.MessageType.Info, this);
+            Log.Write($"Получение сумм продаж по типам оплат.", Log.MessageType.Warning, this);
 
             string[] data = SendPacket(new Packet(Commands.GetSumsByPaymetType, "0"));
 
@@ -709,10 +710,13 @@ namespace SoftMarket.Devices.Printers.Elicom
 
 
 
-            return $"{data[1]},{data[2]},{data[3]},{data[4]},{data[5]},{data[6]}";
+            //return $"{data[1].Trim()},{data[2].Trim()},{data[3].Trim()},{data[4].Trim()},{data[5].Trim()},{data[6].Trim()}";
+            return $"{formatInt(data[1])},{formatInt(data[2])},{formatInt(data[3])},{formatInt(data[4])},{formatInt(data[5])},{formatInt(data[6])}";
 
         }
 
         public string GetRefundSumByPayment() => "";
+
+        private int formatInt(string s) => int.Parse(s.Trim().Replace(".",""));
     }
 }
