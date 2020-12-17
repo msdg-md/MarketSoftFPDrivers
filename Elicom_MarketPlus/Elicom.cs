@@ -575,7 +575,7 @@ namespace SoftMarket.Devices.Printers.Elicom
         {
             get
             {
-                return "";
+                return "0,0,0,0,0;0,0,0,0,0,0,0";
             }
         }
         
