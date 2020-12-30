@@ -692,8 +692,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             if (sums.Length < 1)
                 throw new FiscalPrinterException(CultureStrings.UnknownError);
 
-            //return $"{sums[0].Trim()},{sums[1].Trim()},{sums[2].Trim()},{sums[3].Trim()},{sums[4].Trim()}";
-            return $"{formatInt(sums[0])},{formatInt(sums[1])},{formatInt(sums[2])},{formatInt(sums[3])},{formatInt(sums[4])}";
+            return $"{formatInt(sums[5])},{formatInt(sums[0])},{formatInt(sums[1])},{formatInt(sums[2])},{formatInt(sums[3])}";
 
         }
         public string GetSalesSumByPayment()
@@ -708,10 +707,7 @@ namespace SoftMarket.Devices.Printers.Elicom
 
                 throw new FiscalPrinterException(CultureStrings.UnknownError);
 
-
-
-            //return $"{data[1].Trim()},{data[2].Trim()},{data[3].Trim()},{data[4].Trim()},{data[5].Trim()},{data[6].Trim()}";
-            return $"{formatInt(data[1])},{formatInt(data[2])},{formatInt(data[3])},{formatInt(data[4])},{formatInt(data[5])},{formatInt(data[6])}";
+            return $"{0},{formatInt(data[1])},{formatInt(data[2])},{0},{0},{0}";
 
         }
 
