@@ -36,7 +36,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Program Files %28x86%29\OpenStore\OpenStore\V1\Bin\</OutputPath>
+    <OutputPath>Output\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -54,15 +54,15 @@
   <ItemGroup>
     <Reference Include="DriverGlobals, Version=2.0.6760.37066, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\DriverGlobals.dll</HintPath>
+      <HintPath>lib\DriverGlobals.dll</HintPath>
     </Reference>
     <Reference Include="Globals, Version=5.0.6718.35, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\Globals.dll</HintPath>
+      <HintPath>lib\Globals.dll</HintPath>
     </Reference>
     <Reference Include="IODrivers, Version=2.0.5798.32292, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\OpenStore\OpenStore\V1\Bin\IODrivers.dll</HintPath>
+      <HintPath>lib\IODrivers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
