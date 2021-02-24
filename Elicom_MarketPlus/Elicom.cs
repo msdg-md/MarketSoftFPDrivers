@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 
 namespace SoftMarket.Devices.Printers.Elicom
 {
@@ -211,6 +212,20 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void BeginTextDoc()
         {
+            int attempts = 3;
+            while (attempts > 0)
+            {
+                try
+                {
+                    printer.GetStatus();
+                    attempts = 0;
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(string.Format("BeginTextDoc GetStatus check. Remaining attempts={0}", --attempts), Log.MessageType.Message, null);
+                    Thread.Sleep(1500);
+                }
+            }
             BeginReceipt(ReceiptType.Text, 0, 0, "", "");
         }
 
