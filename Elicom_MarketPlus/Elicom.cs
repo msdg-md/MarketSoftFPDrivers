@@ -212,20 +212,21 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void BeginTextDoc()
         {
-            int attempts = 3;
-            while (attempts > 0)
-            {
-                try
-                {
-                    printer.GetStatus();
-                    attempts = 0;
-                }
-                catch (Exception ex)
-                {
-                    Log.Write(string.Format("BeginTextDoc GetStatus check. Remaining attempts={0}", --attempts), Log.MessageType.Message, null);
-                    Thread.Sleep(1500);
-                }
-            }
+            //int attempts = 0;
+            //while (attempts > 0)
+            //{
+            //    try
+            //    {
+            //        Log.Write(string.Format("Reading printer status. Attempt={0}", attempts), Log.MessageType.Message, null);
+            //        printer.GetStatus();
+            //        break;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Log.Write(string.Format("BeginTextDoc GetStatus check. Remaining attempts={0}", --attempts), Log.MessageType.Message, null);
+            //        //Thread.Sleep(500);
+            //    }
+            //}
             BeginReceipt(ReceiptType.Text, 0, 0, "", "");
         }
 
@@ -512,7 +513,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                     EndReceipt();
                     break;
             }
-
+            Thread.Sleep(1000);
             if (Printer.IsReceiptOpen)
                 throw new FiscalPrinterException(CultureStrings.NotCloseRecNotMoney);
 
@@ -654,7 +655,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             switch (reportType)
             {
                 case ReportType.ZReport:
-                   // Printer.PrintReportByNumber(beginNum, endNum);
+                    Printer.PrintReportByNumber(beginNum, endNum);
                     break;
                 case ReportType.XReport:
                 case ReportType.ArtReport:
@@ -669,7 +670,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             switch (reportType)
             {
                 case ReportType.ZReport:
-                    //Printer.PrintReportByDate(beginDate, endDate);
+                    Printer.PrintReportByDate(beginDate, endDate);
                     break;
                 case ReportType.XReport:
                 case ReportType.ArtReport:

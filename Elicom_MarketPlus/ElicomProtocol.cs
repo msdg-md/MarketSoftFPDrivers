@@ -214,8 +214,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                 }
 
             }
-            Log.Write(new Exception("Before timeout"), null);
-            Log.Write(new Exception("Environment.StackTrace: " + Environment.StackTrace), null);
+            Log.Write(string.Format("Before timeout - Environment.StackTrace: {0}", Environment.StackTrace), Log.MessageType.Message, this);
             throw new LostConnectException(CultureStrings.ReciveTimeout);
         }
 
@@ -256,7 +255,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                     }
                     catch (Exception err)
                     {
-                        Log.Write(string.Format("Command={0}", packet.Command), Log.MessageType.Message, null);
+                        Log.Write(string.Format("Command={0} tryPos={1}", packet.Command, tryPos), Log.MessageType.Message, null);
                         Log.Write(err, null);
 
                         if (++tryPos > trySendCount)
@@ -318,12 +317,11 @@ namespace SoftMarket.Devices.Printers.Elicom
                 }
                 else
                 {
-                    Log.Write(string.Format("comPort.Read() = false && answer.Count == 0 error ({0})", response), Log.MessageType.Info, null);
+                    Log.Write(string.Format("comPort.Read() = false && answer.Count == 0 error ({0})", response), Log.MessageType.Info, this);
                 }
                 
             }
-            //Log.Write(new Exception("Before timeout"), null);
-            //Log.Write(new Exception("Environment.StackTrace: " + Environment.StackTrace), null);
+            Log.Write(string.Format("Before timeout - Environment.StackTrace: {0}",  Environment.StackTrace), Log.MessageType.Message, this);
             throw new LostConnectException(CultureStrings.ReciveTimeout);
         }
 
@@ -458,9 +456,9 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintZReport()
         {
-            Thread.Sleep(3500);
+            //Thread.Sleep(1500);
             SendPacket(new Packet(Commands.DailyFiscalReport, "Z"));
-            Thread.Sleep(3500);
+            //Thread.Sleep(1500);
         }
 
         public void CashIn(Money sum)
