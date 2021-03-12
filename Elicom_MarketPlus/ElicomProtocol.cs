@@ -650,7 +650,7 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void PrintReportByDate(DateTime beginDate, DateTime endDate)
         {
-            Packet packet = new Packet(Commands.DailyFiscalReportByDate);
+            Packet packet = new Packet(Commands.DailyFiscalBriefReportByDate);
             packet.AddMessage(beginDate.ToString("ddMMyy"));
             packet.AddMessage(endDate.ToString("ddMMyy"));
 
