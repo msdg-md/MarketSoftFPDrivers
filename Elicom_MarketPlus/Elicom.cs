@@ -929,7 +929,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                 Printer.Payment(payment.GetSum(PaymentType.Ext1), PaymentType.Ext1);
 
             if (payment.GetSum(PaymentType.Ext2) != new Money(0))
-                Printer.Payment(payment.GetSum(PaymentType.Ext2), PaymentType.Ext1);
+                Printer.Payment(payment.GetSum(PaymentType.Ext2), PaymentType.Ext2);
         }
 
         #endregion
