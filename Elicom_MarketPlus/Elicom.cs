@@ -421,7 +421,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             {
                 case ReceiptType.Sales:
                     Printer.OpenReceipt();
-                    //Printer.PrintLine(CashierString);
+                    Printer.PrintLine(CashierName);
                     Printer.PrintLine(cash);
                     //Printer.PrintLine(comment);
                     Printer.PrintLine(string.Empty);
