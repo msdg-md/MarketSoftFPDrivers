@@ -133,7 +133,7 @@
     <value>Кассир</value>
   </data>
   <data name="CashNo" xml:space="preserve">
-    <value>Касcа № </value>
+    <value>Касcа </value>
   </data>
   <data name="Check" xml:space="preserve">
     <value>ЧЕКОМ</value>

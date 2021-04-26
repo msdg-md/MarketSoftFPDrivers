@@ -408,13 +408,13 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         public void SetCashierName(string cashierName)
         {
-            cashierName = NormalizeString(cashierName, 20);
+            //cashierName = NormalizeString(cashierName, 20);
 
-            Packet packet = new Packet(Commands.SetCashierName);
-            packet.AddMessage("1");
-            packet.AddMessage(cashierName);
-            packet.AddMessage(Consts.CashierPassword);
-            SendPacket(packet);
+            //Packet packet = new Packet(Commands.SetCashierName);
+            //packet.AddMessage("1");
+            //packet.AddMessage(cashierName);
+            //packet.AddMessage(Consts.CashierPassword);
+            //SendPacket(packet);
         }
 
         public string GetCashierName()
@@ -547,7 +547,7 @@ namespace SoftMarket.Devices.Printers.Elicom
             packet.AddMessage(Consts.CashierPassword);
             packet.AddMessage("0");
             packet.AddMessage("0");
-            //packet.AddMessage("0");
+            packet.AddMessage("0");
             SendPacket(packet);
         }
 

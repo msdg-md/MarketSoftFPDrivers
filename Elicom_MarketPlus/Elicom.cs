@@ -41,6 +41,8 @@ namespace SoftMarket.Devices.Printers.Elicom
 
         private Money discountSum;
 
+        private string cashirName = "";
+
         #endregion
 
         #region Constructors
@@ -119,11 +121,14 @@ namespace SoftMarket.Devices.Printers.Elicom
         {
             get
             {
-                return Printer.GetCashierName();
+                //return Printer.GetCashierName();
+                return this.cashirName;
             }
             set
             {
-                Printer.SetCashierName(value);
+                // Printer.SetCashierName(value);
+                Log.Write("Setting CashierName - " + value, Log.MessageType.Message, null);
+                this.cashirName = value;
             }
         }
 
@@ -415,13 +420,21 @@ namespace SoftMarket.Devices.Printers.Elicom
 
             string cash = null;
             if (cashNum != 0)
-                cash = CultureStrings.CashNo + cashNum.ToString();
+                cash = "Casa # " + cashNum.ToString();
+
+            string cashierString = "";
+            Log.Write($"CashierName - {cashierString} ({type})", Log.MessageType.Message, null);
+            if (this.cashirName.Length > 0)
+            {
+                cashierString = $"CASIER: {this.cashirName}";
+            }
 
             switch (type)
             {
                 case ReceiptType.Sales:
                     Printer.OpenReceipt();
-                    Printer.PrintLine(CashierName);
+                    //Printer.PrintLine("#############");
+                    Printer.PrintLine(cashierString);
                     Printer.PrintLine(cash);
                     //Printer.PrintLine(comment);
                     Printer.PrintLine(string.Empty);
@@ -430,7 +443,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                     Printer.OpenNoFislalReceipt();
                     //headerDocText = CultureStrings.RefundByReceipt + recNum;
                     //Printer.PrintHeader(CultureStrings.RefundByReceipt + recNum);
-                    //Printer.PrintLine(CashierString);
+                    Printer.PrintLine(cashierString);
                     Printer.PrintLine(cash);
                     Printer.PrintLine(CultureStrings.RefundByReceipt + recNum);
                     //Printer.PrintLine(comment);

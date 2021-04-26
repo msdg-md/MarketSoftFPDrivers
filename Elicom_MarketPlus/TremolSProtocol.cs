@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftMarket.Globals;
+using System;
 
 namespace SoftMarket.Devices.Printers.Elicom
 {
@@ -70,6 +71,7 @@ namespace SoftMarket.Devices.Printers.Elicom
                 comPort.Reset();
                 comPort.Write(new byte[] { 0x05 });
             }
+            Log.Write(String.Format("TremolSProtocol.CheckPrinterStatus check failed"), Log.MessageType.Info, this);
 
             throw new FiscalPrinterException(CultureStrings.ReciveTimeout);
         }
