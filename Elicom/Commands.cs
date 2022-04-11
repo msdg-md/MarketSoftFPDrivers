@@ -39,6 +39,7 @@ namespace Phoenix.Devices.Printers.Elicom
         ReadTax = 0x62,
         SetLogo = 0x4C,
         Storno = 0x3C,
+        SubTotal = 0x33,
     }
 
 

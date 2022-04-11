@@ -1048,6 +1048,33 @@ namespace Phoenix.Devices.Printers.Elicom
             throw new Exception("The method or operation is not implemented.");
         }
 
+        public void PrintReceiptItem(PrintReceiptItem receiptItem)
+        {
+            this.PrintReceiptItem(receiptItem.ArtCode, receiptItem.ArtName, receiptItem.UnitPrice, receiptItem.Count,
+                receiptItem.UnitName, receiptItem.Cost, receiptItem.OfferName, receiptItem.Discount, receiptItem.RecDiscount, receiptItem.TaxGrp,
+                receiptItem.ArtNum, receiptItem.Cancelled, receiptItem.ArtKey);
+        }
+
+        public void PrintImage(Bitmap bmp)
+        {
+          //  throw new NotImplementedException();
+        }
+
+        public void PrintReceiptItemComments(string[] comments)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void SetIPAddress(string ipAddres, string networkMask, string defaultGateway, bool useDHCP)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void ExecuteExtCommand(int commandId, object parameters)
+        {
+            //throw new NotImplementedException();
+        }
+
         #endregion
     }
 }

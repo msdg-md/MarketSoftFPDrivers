@@ -498,10 +498,11 @@ namespace Phoenix.Devices.Printers.Elicom
 
             if (disc > new Money(0))
             {
-                float Percent = 100 * float.Parse(disc.ToString("F").Replace(".",",")) / (
-                                float.Parse(unitPrice.ToString("F").Replace(".", ",")) * 
-                                float.Parse(count.ToString("F").Replace(".", ",")));
-                priceString += ",-" + Percent.ToString("F").Replace(",",".") + "%";
+                //float Percent = 100 * float.Parse(disc.ToString("F").Replace(".",",")) / (
+                //                float.Parse(unitPrice.ToString("F").Replace(".", ",")) * 
+                //                float.Parse(count.ToString("F").Replace(".", ",")));
+                //priceString += ",-" + Percent.ToString("F").Replace(",",".") + "%";
+                priceString += ":-" + disc.ToString("F").Replace(",", ".");
 
                 //priceString += ",-20.00%";
 
