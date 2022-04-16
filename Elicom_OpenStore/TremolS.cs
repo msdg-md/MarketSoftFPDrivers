@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Phoenix.Devices.IO;
 using Phoenix.Globals;
-using Phoenix.Devices.IO;
+using System;
+using System.Collections.Generic;
 
 namespace Phoenix.Devices.Printers.Elicom
 {
@@ -81,6 +79,9 @@ namespace Phoenix.Devices.Printers.Elicom
                             break;
                         case (int)SettingsParameter.IsStandartPrinting:
                             tremolSPrinter.IsStandartPrinting = parameter.StringValue == CultureStrings.StandartPrinting;
+                            break;
+                        case (int)SettingsParameter.Password:
+                            Printer.CashierPassword = parameter.StringValue;
                             break;
 
                     }

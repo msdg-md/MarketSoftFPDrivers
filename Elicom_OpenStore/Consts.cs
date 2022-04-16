@@ -22,12 +22,12 @@ namespace Phoenix.Devices.Printers.Elicom
             }
         }
 
-        public static string CashierPassword
-        {
-            get
-            {
-                return "0000";
-            }
-        }
+        //public static string CashierPassword
+        //{
+        //    get
+        //    {
+        //        return "000000";
+        //    }
+        //}
     }
 }

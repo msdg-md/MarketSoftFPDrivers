@@ -22,7 +22,7 @@ namespace Phoenix.Devices.Printers.Elicom
         {
             Packet packet = new Packet(Commands.OpenReceipt);
             packet.AddMessage("1");
-            packet.AddMessage(Consts.CashierPassword);
+            packet.AddMessage(CashierPassword);
             packet.AddMessage("0"); //  ‘0’ for brief format and ‘1’ for detailed format
             packet.AddMessage("0"); //  ‘0’ for standard receipt or ‘1’ for refund receipt 
             if (IsStandartPrinting) // value ‘0’ or ‘2’ for standard or postponed 
@@ -37,7 +37,7 @@ namespace Phoenix.Devices.Printers.Elicom
         {
             Packet packet = new Packet(Commands.OpenReceipt);
             packet.AddMessage("1");
-            packet.AddMessage(Consts.CashierPassword);
+            packet.AddMessage(CashierPassword);
             packet.AddMessage("0"); //  ‘0’ for brief format and ‘1’ for detailed format
             packet.AddMessage("1"); //  ‘0’ for standard receipt or ‘1’ for refund receipt
             if (IsStandartPrinting) // value ‘0’ or ‘2’ for standard or postponed 

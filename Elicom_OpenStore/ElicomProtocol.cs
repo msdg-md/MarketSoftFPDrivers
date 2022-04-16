@@ -1,14 +1,11 @@
+using Phoenix.Devices.IO;
+using Phoenix.Devices.IO.COMPort;
+using Phoenix.Globals;
+using Phoenix.Globals.Units;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using Phoenix.Devices.IO;
-using Phoenix.Globals;
-using System.Threading;
-using Phoenix.Devices.IO.COMPort;
-using Phoenix.Globals.Units;
 using System.Drawing;
-using System.IO;
-using System.Drawing.Imaging;
+using System.Threading;
 
 namespace Phoenix.Devices.Printers.Elicom
 {
@@ -25,6 +22,8 @@ namespace Phoenix.Devices.Printers.Elicom
         protected int timeoutAnswer = 30;
         private int trySendCount = 1;
         private byte lastCommandNumber = 0;
+
+        public string CashierPassword { get; set; } = "0000";
 
         public ElicomProtocol()
         {
@@ -291,7 +290,7 @@ namespace Phoenix.Devices.Printers.Elicom
             Packet packet = new Packet(Commands.SetCashierName);
             packet.AddMessage("1");
             packet.AddMessage(cashierName);
-            packet.AddMessage(Consts.CashierPassword);
+            packet.AddMessage(CashierPassword);
             SendPacket(packet);
         }
 
@@ -340,7 +339,7 @@ namespace Phoenix.Devices.Printers.Elicom
         {
             Packet packet = new Packet(Commands.CashIO);
             packet.AddMessage("1");
-            packet.AddMessage(Consts.CashierPassword);
+            packet.AddMessage(CashierPassword);
             packet.AddMessage("0");
             packet.AddMessage(sum.ToString("F"));
             SendPacket(packet);
@@ -350,7 +349,7 @@ namespace Phoenix.Devices.Printers.Elicom
         {
             Packet packet = new Packet(Commands.CashIO);
             packet.AddMessage("1");
-            packet.AddMessage(Consts.CashierPassword);
+            packet.AddMessage(CashierPassword);
             packet.AddMessage("0");
             packet.AddMessage("-" + sum.ToString("F"));
             SendPacket(packet);
@@ -384,7 +383,7 @@ namespace Phoenix.Devices.Printers.Elicom
         {
             Packet packet = new Packet(Commands.OpenNoFislalReceipt);
             packet.AddMessage("1");
-            packet.AddMessage(Consts.CashierPassword);
+            packet.AddMessage(CashierPassword);
             SendPacket(packet);
         }
 
@@ -419,7 +418,7 @@ namespace Phoenix.Devices.Printers.Elicom
         {
             Packet packet = new Packet(Commands.OpenReceipt);
             packet.AddMessage("1");
-            packet.AddMessage(Consts.CashierPassword);
+            packet.AddMessage(CashierPassword);
             packet.AddMessage("2");
             SendPacket(packet);
         }

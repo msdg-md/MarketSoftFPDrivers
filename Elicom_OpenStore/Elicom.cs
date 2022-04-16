@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Phoenix.Devices.IO;
-using System.Drawing;
-using Phoenix.Globals.Units;
 using Phoenix.Globals;
-using System.Collections;
-//using Phoenix.Globals.TemplatePrintInfo;
-using WindowsBase = System.Windows;
-using Phoenix.PrintService.Templates.Printer;
+using Phoenix.Globals.Units;
 using Phoenix.PrintService.Templates;
+using Phoenix.PrintService.Templates.Printer;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Drawing;
+using WindowsBase = System.Windows;
 
 namespace Phoenix.Devices.Printers.Elicom
 {
@@ -126,7 +124,7 @@ namespace Phoenix.Devices.Printers.Elicom
             {
                 try
                 {
-                    Printer.SetCashierName(value);
+                    //Printer.SetCashierName(value);
                 }
                 catch (Exception err)
                 {
@@ -236,15 +234,15 @@ namespace Phoenix.Devices.Printers.Elicom
             {
                 for (int pos = 0; pos < 1; pos++)
                 {
-                    string val = footer.Length < pos + 1 ? "" : footer[pos];
-                    Printer.SetHeaderFooter(pos + 8, val);
+                    //string val = footer.Length < pos + 1 ? "" : footer[pos];
+                    //Printer.SetHeaderFooter(pos + 8, val);
                 }
 
 
                 for (int pos = 0; pos < 7; pos++)
                 {
-                    string val = header.Length < pos + 1 ? "" : header[pos];
-                    Printer.SetHeaderFooter(pos + 1, val);
+                    //string val = header.Length < pos + 1 ? "" : header[pos];
+                    //Printer.SetHeaderFooter(pos + 1, val);
                 }
             }
             catch (Exception)
@@ -758,6 +756,8 @@ namespace Phoenix.Devices.Printers.Elicom
                 parameters.Add(new Parameter((int)SettingsParameter.StopBits, stopbits.ToString(), new string[] { StopBits.One.ToString(), StopBits.OneAndHalf.ToString(), StopBits.Two.ToString() }, CultureStrings.StopBitsDescription));
                 parameters.Add(new Parameter((int)SettingsParameter.Parity, parity.ToString(), new string[] { Parity.Even.ToString(), Parity.Mark.ToString(), Parity.None.ToString(), Parity.Odd.ToString(), Parity.Space.ToString() }, CultureStrings.ParityDescription));
 
+                parameters.Add(new Parameter((int)SettingsParameter.Password, printer.CashierPassword, 1, 10, "Пароль кассира"));
+
                 return parameters.ToArray();
             }
             set
@@ -781,6 +781,9 @@ namespace Phoenix.Devices.Printers.Elicom
                             break;
                         case (int)SettingsParameter.StopBits:
                             stopbits = (StopBits)Enum.Parse(typeof(StopBits), parameter.StringValue, true);
+                            break;
+                        case (int)SettingsParameter.Password:
+                            printer.CashierPassword = parameter.StringValue;
                             break;
                     }
                 }
@@ -967,6 +970,8 @@ namespace Phoenix.Devices.Printers.Elicom
             Parity = 4,
             StopBits = 5,
             IsStandartPrinting =6,
+
+            Password = 7
         }
 
         protected class ItemInfo

@@ -376,7 +376,7 @@
     <value>Принтер не готов к приему комманды.</value>
   </data>
   <data name="TremolSFriendlyName" xml:space="preserve">
-    <value>Tremol S</value>
+    <value>Tremol S/M/FP15-KL(FP15)</value>
   </data>
   <data name="PrintingAfterClose" xml:space="preserve">
     <value>Печать после закрытия</value>
