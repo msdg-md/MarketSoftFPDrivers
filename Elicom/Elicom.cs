@@ -58,8 +58,6 @@ namespace Phoenix.Devices.Printers.Elicom
 
         #endregion
 
-
-
         public void OpenDrawer()
         {
             Printer.OpenDrawer();
